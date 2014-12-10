@@ -1,6 +1,8 @@
 utils.define('jqtags.test').extend('jqtags').as(function(test,_test_, _attr_){
 	
+	//Name of tag you want to use
 	test._name_ = "jq-test";
+	
 	var boolStringToBoolean = {
 	    "true": true,
 	    "false": false,
@@ -13,12 +15,14 @@ utils.define('jqtags.test').extend('jqtags').as(function(test,_test_, _attr_){
 		} else return false;
 	};
 	
+	//Bind Dom Events
 	test._ready_ = function(){
 		this.on(test._name_,'click',function(e){
 			e.target.value = !e.target.value;
 		});
 	};
 	
+	//What shud happen when tag is created
 	_test_.createdCallback = function(){
 		this.render();
 	};
@@ -27,6 +31,7 @@ utils.define('jqtags.test').extend('jqtags').as(function(test,_test_, _attr_){
 		this.innerHTML = (this.value) ? "YES" : "NO";
 	};
 	
+	//Define attributes
 	_attr_['value'] = {
 		get : function(){
 			return test.getBoolValue(this.getAttribute('value'));

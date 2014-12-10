@@ -1,0 +1,12 @@
+{
+    "name": "jqgeeks/jqtags",
+    "type": "library",
+    "description": "JQuery Utilitties compatible with rudrax framework",
+    "keywords": ["rudra", "API"],
+    "license": "MIT",
+    
+    "require": {
+      "frameworks/jquery": "2.*",
+      "jqgeeks/utils" : ">=1.1.3"
+    }
+}
