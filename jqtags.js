@@ -38,5 +38,4 @@ utils.define('jqtags').as(function(jqtags,_instance_){
 			prototype: TagProto
 		});
 	};
-	
 });
