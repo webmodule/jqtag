@@ -1,4 +1,4 @@
-utils.define('jqtags.test').extend('jqtags').as(function(test,_test_, _attr_){
+utils.define('jqtag.test').extend('jqtag').as(function(test,_test_, _attr_){
 	
 	//Name of tag you want to use
 	test._name_ = "jq-test";

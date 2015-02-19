@@ -1,4 +1,4 @@
-utils.define('jqtags').as(function(jqtags,_instance_){
+utils.define('jqtag').as(function(jqtags,_instance_){
 	
 	jqtags._extend_ = function(tag,_tag_){
 		//console.info(this,"jqtags._extend_",tag,_tag_);

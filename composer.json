@@ -1,5 +1,5 @@
 {
-    "name": "jqgeeks/jqtags",
+    "name": "jqtags/jqtag",
     "type": "library",
     "description": "JQuery Utilitties compatible with rudrax framework",
     "keywords": ["rudra", "API"],
