@@ -24,7 +24,7 @@
     "require": {
       "jqgeeks/utils" : ">=1.1.3",
       "webmodules/webcomponentsjs" : ">=0.5.2",
-      "pitana/pitana" : ">=1.0.4"
+      "pitana/pitana" : ""dev-master""
     }
     
 }
