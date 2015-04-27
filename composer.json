@@ -15,7 +15,7 @@
                 "source": {
                     "url": "git://github.com/pitana/pitana.js.git",
                     "type": "git",
-                    "reference"  : "releases/tag/1.0.4"
+                    "reference"  : "1.0.4"
                 }
             }
         }
@@ -24,7 +24,7 @@
     "require": {
       "jqgeeks/utils" : ">=1.1.3",
       "webmodules/webcomponentsjs" : ">=0.5.2",
-      "pitana/pitana" : "dev-master"
+      "pitana/pitana" : "1.0.4"
     }
     
 }
