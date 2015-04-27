@@ -10,11 +10,11 @@
 	     "type": "vcs",
 	     "url": "https://github.com/pitana/pitana.js.git"
 	   	}
-	]
+	],
 
     "require": {
-      "frameworks/jquery": "2.*",
-      "jqgeeks/utils" : ">=1.1.3"
+      "jqgeeks/utils" : ">=1.1.3",
+      "webmodules/webcomponentsjs" : ">=0.5.2"
     }
     
 }
