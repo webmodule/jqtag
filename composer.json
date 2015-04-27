@@ -5,12 +5,20 @@
     "keywords": ["rudra", "API"],
     "license": "MIT",
     
-    "repositories": [
-   		{
-	     "type": "vcs",
-	     "url": "https://github.com/pitana/pitana.js.git"
-	   	}
-	],
+    "repositories": 
+	[
+        {
+            "type": "package",
+            "package": {
+                "name": "smarty/smarty",
+                "version": "1.0.4",
+                "source": {
+                    "url": "https://github.com/pitana/pitana.js.git",
+                    "type": "svn"
+                }
+            }
+        }
+    ],
 
     "require": {
       "jqgeeks/utils" : ">=1.1.3",
