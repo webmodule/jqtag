@@ -5,8 +5,16 @@
     "keywords": ["rudra", "API"],
     "license": "MIT",
     
+    "repositories": [
+   		{
+	     "type": "vcs",
+	     "url": "https://github.com/pitana/pitana.js.git"
+	   	}
+	]
+
     "require": {
       "frameworks/jquery": "2.*",
       "jqgeeks/utils" : ">=1.1.3"
     }
+    
 }

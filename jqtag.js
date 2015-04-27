@@ -28,11 +28,18 @@ utils.define('jqtag').as(function(jqtags,_instance_){
 		}
 	};
 	
+	jqtags.setProperties = function(_accessor_){
+		_accessor_.
+		
+	};
+	
 	jqtags._extended_ = function(tag,_tag_){
 		console.info(this,"jqtags._extended_",tag.module,_tag_);
 		var tag_name = tag._name_.replace('-','_','g');
 		var TagProto = Object.create(HTMLElement.prototype);
 		jqtags.mix(TagProto,_tag_);
+		
+		
 		Object.defineProperties(TagProto,tag._attributes_);
 		window[tag_name] = document.registerElement(tag._name_, {
 			prototype: TagProto

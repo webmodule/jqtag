@@ -21,7 +21,13 @@ utils.define('jqtag.test').extend('jqtag').as(function(test,_test_, _attr_){
 			e.target.value = !e.target.value;
 		});
 	};
-	
+	_test_._accessor_ = {
+			value : {
+				type : "boolean",
+				defaultValue : false,
+				onchange : "render"
+			}
+	};
 	//What shud happen when tag is created
 	_test_.createdCallback = function(){
 		this.render();
