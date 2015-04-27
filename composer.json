@@ -10,7 +10,7 @@
         {
             "type": "package",
             "package": {
-                "name": "smarty/smarty",
+                "name": "pitana/pitana",
                 "version": "1.0.4",
                 "source": {
                     "url": "https://github.com/pitana/pitana.js.git",
