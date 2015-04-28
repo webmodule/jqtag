@@ -1,8 +1,8 @@
 {
     "name": "jqgeeks/jqtag",
     "type": "library",
-    "description": "JQuery Utilitties compatible with rudrax framework",
-    "keywords": ["rudra", "API"],
+    "description": "A tag library to comply with jqgeeks/utils",
+    "keywords": ["x-tags", "polymers"],
     "license": "MIT",
 
 
