@@ -8,7 +8,8 @@
 
     "require": {
       "jqgeeks/utils" : ">=1.1.3",
-      "webmodules/webcomponentsjs" : ">=0.5.2"
+      "webmodules/webcomponentsjs" : ">=0.5.2",
+      "pitana/pitana.js" : "dev-master"
     }
     
 }
