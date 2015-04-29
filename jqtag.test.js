@@ -1,53 +1,22 @@
 utils.define('jqtag.test').extend('jqtag').as(function(test,_test_, _attr_){
 	
-	//Name of tag you want to use
-	test._name_ = "jq-test";
+	test.register({
+	    tagName: "jq-test",
+	    events: {
+	        "click":"toggleValue"
+	    },
+	    accessors: {
+	        name: {
+	            type: "string"
+	        }
+	    },
+	    attachedCallback: function () {
+	        this.$.innerHTML = (!this.active ? "Hi" : "Bye") + " " + this.$.name;
+	    },
+	    toggleValue : function(){
+	    	this.active = !this.active;
+	    	this.attachedCallback();
+	    }
+	});
 	
-	var boolStringToBoolean = {
-	    "true": true,
-	    "false": false,
-	    "null" : false,
-	    "": false
-	};
-	test.getBoolValue = function(value){
-		if(boolStringToBoolean[value]!==undefined){
-			return boolStringToBoolean[value];
-		} else return false;
-	};
-	
-	//Bind Dom Events
-	test._ready_ = function(){
-		this.on(test._name_,'click',function(e){
-			e.target.value = !e.target.value;
-		});
-	};
-	_test_._accessor_ = {
-			value : {
-				type : "boolean",
-				defaultValue : false,
-				onchange : "render"
-			}
-	};
-	//What shud happen when tag is created
-	_test_.createdCallback = function(){
-		this.render();
-	};
-	
-	_test_.render = function(){
-		this.innerHTML = (this.value) ? "YES" : "NO";
-	};
-	
-	//Define attributes
-	_attr_['value'] = {
-		get : function(){
-			return test.getBoolValue(this.getAttribute('value'));
-		},
-		set : function(val){
-			if(val===true){
-				val = 'true';
-			}
-			this.setAttribute('value',test.getBoolValue(val));
-			this.render();
-		}
-	};
 });
