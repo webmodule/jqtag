@@ -4,7 +4,7 @@ utils.define('jqtag').as(function(jqtag,_instance_){
 	
 	jqtag._extend_ = function(tag,_tag_){
 		tag._jqTagConfig_ = {};
-		tag._define_(tag,tag._jqTagConfig_);
+		tag._definition_(tag,tag._jqTagConfig_);
 	};
 
 	jqtag.register = function(config){
