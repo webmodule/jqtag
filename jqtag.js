@@ -12,6 +12,10 @@ _define_('jqtag',function(jqtag,_jqtag_){
 		this._jqTagConfig_ = config || {};
 	};
 	
+	jqtag.trigger = function(elem,eventName, detail){
+		return pitana.domEvents.trigger(elem, eventName, detail);
+	};
+	
 	jqtag._extended_ = function(tag,_tag_){
 		var parentConfig = tag.parent()._jqTagConfig_ || {};
 		tag._jqTagConfig_ = $.extend(true,parentConfig,tag._jqTagConfig_);
