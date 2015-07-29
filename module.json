@@ -1,0 +1,10 @@
+{
+	"name": "webmodules/jqtag",
+	"jqtags/jqtag": {
+		"js": ["jqtag.js"],
+		"css": ["jqtag.css"],
+		"on": ["webmodules/foo", "pitana/pitana.js"]
+	}
+}
+
+

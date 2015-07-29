@@ -1,6 +1,5 @@
-_define_('jqtag',function(jqtag,_jqtag_){
+_define_('jqtag',function(jqtag){
 	
-	_require_(":pitana/pitana.js");
 	var pitana = _module_("pitana");
 	
 	jqtag._extend_ = function(tag,_tag_){
@@ -25,7 +24,7 @@ _define_('jqtag',function(jqtag,_jqtag_){
 		if(_jqTagConfig_.tagName === undefined){
 			_jqTagConfig_.tagName = moduleName.replace(/jqtags\./,"jq-").replace(/\./g,"-");
 		}
-		return pitana.register(_jqTagConfig_)
+		return pitana.register(_jqTagConfig_);
 	};
 	
 	jqtag.META_KEYS = {};
@@ -50,7 +49,7 @@ _define_('jqtag',function(jqtag,_jqtag_){
 	
 	(function(){
 		for(var i in jqtag.key_codes){
-			jqtag.META_KEYS[i] = { name : jqtag.key_codes[i], code : i}
+			jqtag.META_KEYS[i] = { name : jqtag.key_codes[i], code : i};
 		}
 		//Navigation Keys
 		;[9,13,37,38,39,40].map(function(code){
@@ -62,9 +61,7 @@ _define_('jqtag',function(jqtag,_jqtag_){
 		;[38,40].map(function(code){
 			jqtag.META_KEYS[code].isNavY = true;
 		});
-		
 	})();
-	
 	
 });
 
@@ -74,12 +71,8 @@ _define_('jqtag',function(jqtag,_jqtag_){
 	var pitana = _module_("pitana");
 	
 	foo._tag_ = function(tagName,definition){
-		if(utils!==undefined && typeof utils.define === 'function'){
-			return utils.define(tagName).extend('jqtag').as(definition);
-		} else {
-			var module = _define_(tagName,'jqtag',definition);
-			return jqtag._pitana_register_(tagName,module._jqTagConfig_ || module)
-		}
+		var module = _define_(tagName,'jqtag',definition);
+		return jqtag._pitana_register_(tagName,module._jqTagConfig_ || module);
 	};
 	
 })(this);

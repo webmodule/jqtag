@@ -1,0 +1,15 @@
+{
+	"name": "webmodules-jqtag",
+	"main": "jqtag.js",
+	"authors": ["Lalit Tanwar <lalit.tanwar07@gmail.com>"],
+	"description": "A tag library based on pitana and jquery, to comply with foo ",
+	"keywords": ["pitana", "jquery"],
+	"dependencies": {
+		"webmodules-foo": ">=2.0.2",
+		"webmodules-webcomponentsjs": ">=0.5.2",
+		"pitana-pitana.js": ">=0.0.0",
+		"webmodules-jquery": ">=1.8"
+	},
+	"license": "MIT",
+	"ignore": ["**/.*", "node_modules", "bower_components"]
+}
