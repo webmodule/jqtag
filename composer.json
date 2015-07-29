@@ -7,8 +7,8 @@
 
 	"require": {
 		"webmodules/foo": ">=2.0.2",
-		"webmodules/webcomponentsjs": ">=0.5.2",
-		"pitana/pitana.js": ">=0.0.0",
+		"webmodules/webcomponentsjs": ">=0.5.3",
+		"pitana/pitana.js": ">=1.0.62",
 		"webmodules/jquery": ">=1.8"
 	}
 }
