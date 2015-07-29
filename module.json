@@ -3,7 +3,7 @@
 	"jqtags/jqtag": {
 		"js": ["jqtag.js"],
 		"css": ["jqtag.css"],
-		"on": ["webmodules/foo", "pitana/pitana.js"]
+		"on": ["webmodules/foo", "pitana/pitana.js","webmodules/jquery.js"]
 	}
 }
 
