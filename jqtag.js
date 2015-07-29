@@ -15,11 +15,12 @@ _define_('jqtag',function(jqtag){
 		return pitana.domEvents.trigger(elem, eventName, detail);
 	};
 	
-	jqtag._extended_ = function(tag,_tag_){
-		var parentConfig = tag.parent()._jqTagConfig_ || {};
-		tag._jqTagConfig_ = $.extend(true,parentConfig,tag._jqTagConfig_);
-		jqtag._pitana_register_(tag.module,tag._jqTagConfig_);
-	};
+//	jqtag._extended_ = function(tag,_tag_){
+//		var parentConfig = tag.parent()._jqTagConfig_ || {};
+//		tag._jqTagConfig_ = $.extend(true,parentConfig,tag._jqTagConfig_);
+//		jqtag._pitana_register_(tag.module,tag._jqTagConfig_);
+//	};
+	
 	jqtag._pitana_register_ = function(moduleName,_jqTagConfig_){
 		if(_jqTagConfig_.tagName === undefined){
 			_jqTagConfig_.tagName = moduleName.replace(/jqtags\./,"jq-").replace(/\./g,"-");
@@ -70,9 +71,10 @@ _define_('jqtag',function(jqtag){
 	var jqtag = _module_("jqtag");
 	var pitana = _module_("pitana");
 	
-	foo._tag_ = function(tagName,definition){
-		var module = _define_(tagName,'jqtag',definition);
-		return jqtag._pitana_register_(tagName,module._jqTagConfig_ || module);
-	};
+	foo._setFoo_("tag",function(tagName,definition){
+		_define_(tagName,"jqtag",definition);
+		var tagModule = _module_(tagName);
+		return jqtag._pitana_register_(tagName,tagModule._jqTagConfig_ || tagModule);
+	});
 	
 })(this);
