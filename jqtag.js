@@ -71,7 +71,7 @@ _define_('jqtag',function(jqtag){
 	var jqtag = _module_("jqtag");
 	var pitana = _module_("pitana");
 	
-	foo._setFoo_("tag",function(tagName,definition){
+	foo._define_.setSafe("tag",function(tagName,definition){
 		_define_(tagName,"jqtag",definition);
 		var tagModule = _module_(tagName);
 		return jqtag._pitana_register_(tagName,tagModule._jqTagConfig_ || tagModule);
