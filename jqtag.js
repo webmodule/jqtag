@@ -63,6 +63,28 @@ _define_('jqtag',function(jqtag){
 			jqtag.META_KEYS[code].isNavY = true;
 		});
 	})();
+
+
+  var bindDomEvents = function(self,adapterName,events){
+    //We use {"eventName hash":"handler"} kind of notation !
+    pitana.util.for(events, function(methodName, key) {
+      key = key.trim().replace(/ +/g, " ");
+      var arr = key.split(" ");
+      var eventName = arr.shift();
+      var hash =  arr.join(" ") + "[jq-adapter='"+ adapterName + "']" ;
+      var callback = pitana.domEvents.addLiveEventListener(document, eventName, hash, self[methodName], self);
+    });
+  };
+
+  jqtag.adapter = {
+    bind: function (self) {
+      return bindDomEvents(self, self.name, self.events)
+    }
+  };
+
+  jqtag._ready_ = function(){
+    console.info("jQTag is ready");
+  }
 	
 });
 
@@ -70,11 +92,11 @@ _define_('jqtag',function(jqtag){
 	
 	var jqtag = _module_("jqtag");
 	var pitana = _module_("pitana");
-	
+  
 	foo._define_.setSafe("tag",function(tagName,definition){
 		_define_(tagName,"jqtag",definition);
 		var tagModule = _module_(tagName);
 		return jqtag._pitana_register_(tagName,tagModule._jqTagConfig_ || tagModule);
 	});
-	
+
 })(this);
