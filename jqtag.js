@@ -71,7 +71,8 @@ _define_('jqtag',function(jqtag){
       key = key.trim().replace(/ +/g, " ");
       var arr = key.split(" ");
       var eventName = arr.shift();
-      var hash =  arr.join(" ") + "[jq-adapter='"+ adapterName + "']" ;
+      var htmlTag = arr.shift();
+      var hash =   htmlTag+"[jq-adapter='"+ adapterName + "'] "  + arr.join(" ");
       var callback = pitana.domEvents.addLiveEventListener(document, eventName, hash, self[methodName], self);
     });
   };
@@ -92,7 +93,7 @@ _define_('jqtag',function(jqtag){
 	
 	var jqtag = _module_("jqtag");
 	var pitana = _module_("pitana");
-  
+
 	foo._define_.setSafe("tag",function(tagName,definition){
 		_define_(tagName,"jqtag",definition);
 		var tagModule = _module_(tagName);
