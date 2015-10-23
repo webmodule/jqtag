@@ -7,7 +7,7 @@
 	"dependencies": {
 		"webmodules-foo": ">=3.0.0",
 		"webmodules-webcomponentsjs": ">=0.5.3",
-		"jqgeeks-pitana.js": ">=1.0.62",
+		"jqgeeks-pitana.js": ">=1.0.67",
 		"webmodules-jquery": ">=1.8"
 	},
 	"license": "MIT",
